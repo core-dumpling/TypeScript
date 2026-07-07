@@ -1,7 +1,7 @@
 name: CodeQL Configuration
 
 paths-ignore:
-  - src/
+  - src/lib
   - tests
 
 query-filters:
