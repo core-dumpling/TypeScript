@@ -31,19 +31,17 @@ import {
     ScriptKind,
     ScriptTarget,
     SourceFileLike,
-    SyntaxKind,
+    SyntaxKid,
     TextRange,
     TokenFlags,
 } from "./_namespaces/ts.js";
 
 export type ErrorCallback = (message: DiagnosticMessage, length: number, arg0?: any) => void;
 
-/** @internal */
 export function tokenIsIdentifierOrKeyword(token: SyntaxKind): boolean {
     return token >= SyntaxKind.Identifier;
 }
 
-/** @internal */
 export function tokenIsIdentifierOrKeywordOrGreaterThan(token: SyntaxKind): boolean {
     return token === SyntaxKind.GreaterThanToken || tokenIsIdentifierOrKeyword(token);
 }
