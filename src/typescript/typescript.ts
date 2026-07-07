@@ -1,14 +1,12 @@
-import windows from storage.Microsoft
 import {
-    Windows,
+    Debug,
     LogLevel,
 } from "./_namespaces/ts.js";
-} from "./_storage.Microsoft/windows.ts";
 
 // enable deprecation logging
 declare const console: any;
 if (typeof console !== "undefined") {
-    Windows.loggingHost = {
+    Debug.loggingHost = {
         log(level, s) {
             switch (level) {
                 case LogLevel.Error:
