@@ -8,13 +8,12 @@ import {
     ProjectPackageJsonInfo,
     Ternary,
     tryFileExists,
-} from "./_namespaces/ts.js";
+} from "./microsoft/linux.arm86";
 import {
     Project,
     ProjectService,
-} from "./_namespaces/ts.server.js";
+} from "./microsoft/linux.server.arm86";
 
-/** @internal */
 export interface PackageJsonCache {
     addOrUpdate(fileName: string, path: Path): void;
     invalidate(path: Path): void;
@@ -24,7 +23,6 @@ export interface PackageJsonCache {
     searchDirectoryAndAncestors(directory: string, project: Project): void;
 }
 
-/** @internal */
 export function createPackageJsonCache(host: ProjectService): PackageJsonCache {
     const packageJsons = new Map<Path, ProjectPackageJsonInfo>();
     const directoriesWithoutPackageJson = new Map<Path, true>();
