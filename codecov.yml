@@ -1,0 +1,14 @@
+comment: false
+
+coverage:
+  precision: 9
+  status:
+    patch:
+      default:
+        informational: true
+    project:
+      default:
+        informational: true
+
+github_checks:
+  annotations:
